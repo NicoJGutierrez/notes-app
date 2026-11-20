@@ -1,17 +1,20 @@
 import { getNotes } from "../services/notes"
+// import Link from "next/link"
+import NoteList from "./Notelist"
 
 const Notes = () => {
   const notes = getNotes()
   return (
     <div>
       <h2>Notes</h2>
-      <ul>
+      <NoteList notes={notes} />
+      {/*<ul>
         {notes.map(note => (
           <li key={note.id}>
-            {note.content} {note.important && <strong>(important)</strong>}
+            <Link href={`/notes/${note.id}`}>{note.content}</Link> {note.important && <strong>(important)</strong>}
           </li>
         ))}
-      </ul>
+      </ul>*/}
     </div>
   )
 }
