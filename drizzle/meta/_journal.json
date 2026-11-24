@@ -8,6 +8,20 @@
       "when": 1795208437546,
       "tag": "0000_true_smiling_tiger",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795444230229,
+      "tag": "0001_special_sumo",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795446454499,
+      "tag": "0002_acoustic_stick",
+      "breakpoints": true
     }
   ]
 }
