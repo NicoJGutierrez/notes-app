@@ -21,7 +21,9 @@ export const addNote = async (content: string, important: boolean) => {
   const user = await db.query.users.findFirst({
     orderBy: sql`RANDOM()`,
   })
-
+  if (!user) {
+    throw new Error("No hay usuarios para asociar al blog (probablemente no se puede acceder a la base de datos o está vacía).")
+  }
   await db.insert(notes).values({ content, important, userId: user.id })
 }
 
